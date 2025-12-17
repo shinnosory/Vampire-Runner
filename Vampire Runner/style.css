@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #0a0a0a;
+  border-bottom: 2px solid darkred;
+}
+
+.logo {
+  color: darkred;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgb(19, 7, 7);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: crimson;
+}
+
+.hint {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.game {
+  width: 100vw;
+  height: 70vh;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid darkred;
+  background-image: url("cenario.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.vampire {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+}
+
+.vampire img {
+  width: 130%;
+  height: 130%;
+  object-fit: contain;
+}
+
+.jump {
+  animation: jump 0.6s ease-out;
+}
+
+@keyframes jump {
+  0% { bottom: 0; }
+  50% { bottom: 90px; }
+  100% { bottom: 0; }
+}
+.obstacle {
+  width: 60px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 600px;
+  animation: obstacleMove 1.8s linear infinite;
+}
+
+.obstacle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translateY(20px);
+}
+
+@keyframes obstacleMove {
+  0%   { left: 600px; }
+  100% { left: -80px; }
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #0a0a0a;
+  border-top: 2px solid darkred;
+  color: #ccc;
+  text-align: center;
+}
+
+.footer p {
+  max-width: 800px;
+  margin: 0 auto 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-copy {
+  font-size: 12px;
+  opacity: 0.7;
+}
